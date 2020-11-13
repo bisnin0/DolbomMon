@@ -40,10 +40,7 @@
         
     }
     function logOut(){
-		<%
-			session.setAttribute("logStatus", "N");
-		%>		
-		location.href="/dbmon/management";
+		location.href="/dbmon/managerLogout";
     } 
 
 

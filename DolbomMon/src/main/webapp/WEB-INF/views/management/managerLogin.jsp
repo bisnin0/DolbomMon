@@ -21,10 +21,7 @@
 
 	$(function(){
 		$("#test").click(function(){ /*DB작업 전 임시 로그인버튼*/
-			<%
-			session.setAttribute("logStatus", "Y");
-			%>		
-			location.href="/dbmon/management";
+			location.href="/dbmon/managerlogin2";
 			
 		});
 		

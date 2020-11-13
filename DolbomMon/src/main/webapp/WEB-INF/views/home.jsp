@@ -7,10 +7,17 @@
 <title>Dolbommon</title>
 <meta name="viewport" content="width=device, initial-scale=1" />
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.css" type="text/css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="<%=request.getContextPath() %>/css/bootstrap.js"></script>
-<script src="css/jquery.bxslider.js"></script>
 <link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css"/>
+<%
+String manager = (String)session.getAttribute("managerStatus");
+if(manager!="Y"){
+	
+%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<%} %>
+<script src="<%=request.getContextPath() %>/css/bootstrap.js"></script>
+<script src="<%=request.getContextPath() %>/css/jquery.bxslider.js"></script>
+
 </head>
 <style>
    body{
@@ -88,10 +95,8 @@
       <li><a href="#">My Menu</a></li>
    </ul>
 </nav>
-
-
 <div id="slider">
-<jsp:include page="bxslider.jsp"/>
+<%@ include file="/WEB-INF/views/bxslider.jsp" %>
 </div>
 <h1>
 	<a href="/dbmon/join">회원가입</a>
