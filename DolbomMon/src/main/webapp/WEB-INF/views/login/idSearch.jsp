@@ -14,8 +14,8 @@
 		width: 800px;
 	}	
 	#top{
-		margin: 20px;
-		padding: 20px;
+		margin: 15px;
+		padding: 15px;
 		text-align: center;
 		font-size: 30px;
 	}
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 		</div>
-	<br/><input type="submit" class="btn btn-warning btn-lg btn-block" value="계정 찾기"/>
+		<br/><input type="submit" class="btn btn-warning btn-lg btn-block" value="계정 찾기"/>
 	</form>
 </div>
 </body>

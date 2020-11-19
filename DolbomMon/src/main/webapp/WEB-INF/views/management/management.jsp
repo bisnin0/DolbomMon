@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/74c16632e0.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="<%=request.getContextPath() %>/css/bootstrap.js"></script>
@@ -42,6 +43,10 @@
     function logOut(){
 		location.href="/dbmon/managerLogout";
     } 
+    
+	function openNewWindow() { 
+		window.open("/dbmon/messagetest","","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=482, height=600"); 
+		}
 
 
 </script>
@@ -64,9 +69,11 @@
 		height: -webkit-calc(100% - 100px);
 		
 	}
+	/*
 	button{
 		margin-top:15px;
 	}
+	*/
 	
 
 	.fa {
@@ -199,7 +206,6 @@
 	
 </style>
 
-
 </head>
 <body>
 <div class="area"></div><nav class="main-menu">
@@ -299,7 +305,7 @@
 
 
 <!-- ============================= -->
-<div id="topBar" id="topBar"></div><!-- 돌봄몬 사이트 네비게이션 위치 -->
+<div id="topBar" id="topBar"><a href="javascript:openNewWindow()"><button class="btn btn-primary">쪽지</button></a></div><!-- 돌봄몬 사이트 네비게이션 위치 -->
 <div id="mainPage"></div>
 </body>
 </html>

@@ -8,16 +8,40 @@
 	})
 </script>
 
-<div style="float:right;">
-	<button type="button" class="btn btn-info" id="mrBtn">관리자 등록</button>
+<div style="float:right; margin:10px 20px;">
+    <div class="row">    
+        <div class="col-xs-8 col-xs-offset-2">
+		    <div class="input-group">
+				<div class="dropdown">
+				  <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="serchKey" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    검색 조건
+				  </a>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				    <a class="dropdown-item" href="#">이름</a>
+				    <a class="dropdown-item" href="#">직급</a>
+				    <a class="dropdown-item" href="#">부서</a>
+				  </div>
+				</div>
+                <input type="hidden" name="search_param" value="all" id="search_param">         
+                <input type="text" class="form-control" name="x" placeholder="검색어 입력">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+	</div>
+</div>
+
+<div style="float:clear; margin:10px 20px; width:100px">
 	<div class="dropdown">
-	  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Dropdown link
+	  <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    관리자 등급
 	  </a>
 	  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-	    <a class="dropdown-item" href="#">Action</a>
-	    <a class="dropdown-item" href="#">Another action</a>
-	    <a class="dropdown-item" href="#">Something else here</a>
+	    <a class="dropdown-item" href="#">1등급</a>
+	    <a class="dropdown-item" href="#">2등급</a>
+	    <a class="dropdown-item" href="#">3등급</a>
+	    <a class="dropdown-item" href="#">4등급</a>
 	  </div>
 	</div>
 </div>
@@ -25,33 +49,29 @@
 <table class="table">
   <thead class="thead-light">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">관리자번호</th>
+      <th scope="col">아이디</th>
+      <th scope="col">이름</th>
+      <th scope="col">부서</th>
+      <th scope="col">직책</th>
+      <th scope="col">연락처</th>
+      <th scope="col">등록일</th>
+      <th scope="col">권한</th>
     </tr>
   </thead>
   <tbody>
    	<%
-  		for(int i=0; i<=5; i++){
+  		for(int i=0; i<=10; i++){
   	%>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr> 
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>test2</td>
+      <td>관리자1</td>
+      <td>유지보수팀</td>
+      <td>과장</td>
+      <td>010-1231-1231</td>
+      <td>2020-01-01</td>
+      <td>2등급</td>
     </tr>
     <%
   		}

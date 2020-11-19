@@ -10,7 +10,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/css/bootstrap.js"></script>
 <style>
-
 	.container{
 		width: 800px;
 	}
@@ -29,13 +28,12 @@
 		display: block;
 		margin: 0px auto;
 	}
-
 </style>
 </head>
 <body>
 <div class="container">
 	<div>
-	<a href=""><img src="<%=request.getContextPath()%>/img/dolbomLogo.png" id="logo" align="middle"/></a>
+	<a href="/dbmon"><img src="<%=request.getContextPath()%>/img/dbLogo.png" id="logo" align="middle"/></a>
 	
 	</div>
 	<form method="post" action="loginOk">
@@ -56,7 +54,7 @@
 		</div>
 		<div id="search">
 		<a href="/dbmon/searchId">로그인 정보를 잊으셨나요?</a><br/>
-		<a href="">회원가입</a>
+		<a href="join">회원가입</a>
 		</div>
 	</form>
 </div>

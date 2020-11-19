@@ -11,43 +11,29 @@
 <script src="<%=request.getContextPath()%>/css/bootstrap.js"></script>
 <style>
 	.container{
-		width: 800px;
-		
+		width: 900px;	
 	}
 	#top{
-		margin: 20px;
-		padding: 20px;
+		margin: 15px;
+		padding: 15px;
 		text-align: center;
 		font-size: 30px;
 	}
 	
-	ul, li{
-		margin: 0px;
-		padding: 0px;
-		list-style-type: none;
-	}
-	li{
-		float: left;
-		width: 10%;
-		height: 40px;
-		line-height: 40px;
-		border-bottom: 1px solid gray;
-		
-		
-	}
-	
-	#lst>li:nth-child(5n+2){
-		width: 60%;
-	}
-	.wordCut{
+	.subject{
+		width: 400px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
 	
-	#board{
-		
 	}
+	a:link, a:visited, a:hover{
+	 	color: black;
+	 }
+	body{
+	 	font-size: 0.9em;
+	 }
+	
 </style>
 </head>
 <body>
@@ -55,33 +41,91 @@
 <div id="top">
 <b>자유게시판</b>
 </div>
-<div id="board">
-	<ul id="lst">
-		<li>글번호</li>
-		<li>제목</li>
-		<li>작성자</li>
-		<li>등록일</li>
-		<li>조회수</li>
-		
-		<c:forEach var="vo" items="">
-			<li>글번호</li>
-			<li class="wordCut">제목</li>
-			<li>작성자</li>
-			<li>등록일</li>
-			<li>조회수</li>
-		</c:forEach>
-		
-	</ul>
-	
-
-
+<div>
+	<a class="btn btn-warning" href="freeBoardWrite" role="button">글쓰기</a>
 </div>
-
-
-
-
-
-
+<div id="board">
+<br/>
+	<table class="table table-hover">
+		<colgroup>
+			<col style="width: 10%;">
+			<col>
+			<col style="width: 15%;">
+			<col style="width: 15%;">
+			<col style="width: 10%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">글번호</th>
+				<th scope="col">글제목</th>
+				<th scope="col">작성자</th>
+				<th scope="col">등록일</th>
+				<th scope="col">조회수</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<!-- 글제목 script로 글자수 제한하기 -->
+				<td class="subject"><a href="freeBoardView">글제목입니다1111111글제목입니다1111111</a></td>
+				<td>홍길동</td>
+				<td>13:11</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td class="subject"><a href="#">글제목입니다2222222</a></td>
+				<td>정길동</td>
+				<td>11-11 15:11</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td class="subject"><a href="#">글제목입니다3333333</a></td>
+				<td>정길동</td>
+				<td>11-10 13:51</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td class="subject"><a href="#">글제목입니다4444444</a></td>
+				<td>정길동</td>
+				<td>11-10 13:51</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<th scope="row">5</th>
+				<td class="subject"><a href="#">글제목입니다5555555</a></td>
+				<td>정길동</td>
+				<td>11-10 13:51</td>
+				<td>7</td>
+			</tr>
+		</tbody>
+	</table>
+	<br/>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			<li class="page-item disabled">
+				<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#">Next</a>
+			</li>
+		</ul>
+	</nav>
+	<br/>
+	<div class="input-group mb-3">
+		<input type="text" class="form-control" placeholder="검색어를 입력하세요"/>
+		<div class="input-group-append">
+			<button class="btn btn-warning" type="button" id="button-addon2">검색</button>
+		</div>
+	</div>
+</div>
 </div>
 </body>
 </html>

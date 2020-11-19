@@ -31,6 +31,7 @@ public class ManagmentController {
 	@RequestMapping("/managerRegister")
 	public String managerRegister(){
 		return "management/managerRegister";
+
 	}
 	@RequestMapping("/accountManage")
 	public String accountManage(){
@@ -39,6 +40,10 @@ public class ManagmentController {
 	@RequestMapping("/managerManage")
 	public String managerManage(){
 		return "management/managerManage";
+	}
+	@RequestMapping("/messagetest")
+	public String message(){
+		return "message/messageMain";
 	}
 	
 	@RequestMapping("/managerLogout")
@@ -51,6 +56,5 @@ public class ManagmentController {
 		session.setAttribute("managerStatus", "Y");
 		return "management/management";
 	}
-
 
 }

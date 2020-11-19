@@ -17,6 +17,7 @@
 	<resources mapping="/css/**" location="/css/" />
 	<resources mapping="/upload/**" location="/upload/" />
 	<resources mapping="/img/**" location="/img/" />
+	<resources mapping="/icon/**" location="/icon/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -26,7 +27,7 @@
 	
 	<context:component-scan base-package="com.dolbommon.dbmon" />
 	<context:component-scan base-package="com.bitcamp.test" />
-	<context:component-scan base-package="com.bitcamp.dbmon.firstpage" />
+	<context:component-scan base-package="com.bitcamp.dbmon.brand" />
 		<!-- 오라클dataSource 객체 생성 -->
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></beans:property>
