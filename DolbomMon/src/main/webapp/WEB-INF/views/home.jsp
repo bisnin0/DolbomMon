@@ -241,8 +241,8 @@
       
       <h1 style="color:white; font-family: 'Jua', sans-seri;">안심 돌봄 서비스</h1>
       <br/><br/><br/><br/>
-      <h2 style="color:white">육아에 도움이 필요할 땐 언제 어디서나</h2>
-      <h2 style="font-weight:bold; color:gold;">돌봄몬이 해결하겠습니다.</h2>
+      <h2 style="color:white; font-family: 'Jua', sans-seri;"">육아에 도움이 필요할 땐 언제 어디서나</h2>
+      <h2 style="color:gold; font-family: 'Jua', sans-seri;"">돌봄몬이 해결하겠습니다.</h2>
    </div>
 
 
