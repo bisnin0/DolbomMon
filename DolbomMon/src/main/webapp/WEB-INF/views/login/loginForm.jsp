@@ -14,7 +14,7 @@
 	.container{
 		width: 700px;
 		min-height: 530px;
-		margin-bottom:100px;
+		margin-bottom: 100px;
 	}
 	#top{
 		margin: 15px;

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <%@ include file="/WEB-INF/views/top.jsp" %>
 <style>
-	.container{width:800px;}
+	.container{width:800px; min-height:400px;}
 	img { width: 50px; height:50px;}
 	
 	#title{
@@ -24,7 +24,10 @@
 		font-size: 25px;
 		font-weight: 700;
 		vertical-align: bottom;
-		text-align:center;
+		margin: 15px;
+		margin-top: 40px;
+		padding: 15px;
+		text-align: center;
 	}
 	.nav-item>a {
 	color:black;

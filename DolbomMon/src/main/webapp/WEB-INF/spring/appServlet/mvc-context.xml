@@ -9,7 +9,7 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
-	<!--		관리자 로그인 인터셉터 -->
+	<!-- 관리자 로그인 인터셉터 -->
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/management"/>
@@ -29,7 +29,8 @@
 	<mvc:interceptors>
 	 	<mvc:interceptor>
 	 		<mvc:mapping path="/parentView"/>
-	 		<mvc:mapping path="/teacherView"/> 		
+	 		<mvc:mapping path="/teacherView"/>
+	 		<mvc:mapping path="/identityForm"/>
 	 		<bean class="com.dolbommon.dbmon.Interceptor.LoginInterceptor"/>
 	 	</mvc:interceptor> 
 	 </mvc:interceptors>
