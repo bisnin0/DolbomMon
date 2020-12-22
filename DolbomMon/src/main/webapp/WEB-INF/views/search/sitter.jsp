@@ -346,9 +346,9 @@ var value;
 								tag += '<span class="emptyHeart">';
 								tag += '<input type="hidden" value="'+ vo.userid +'" />';
 								tag += '<i class="fab fa-gratipay" style=';
-								if(vo.userid!=vo.cardid){
+								if(vo.userid!=vo.cardid && vo.userid!=null){
 									tag += '"color:gray"';
-								} else if(vo.userid == vo.cardid){
+								} else if(vo.userid == vo.cardid && vo.userid!=null){
 									tag += '"color:orange"';
 								}
 								tag += '></i>';
@@ -453,9 +453,9 @@ var value;
 						tag += '<span class="emptyHeart">';
 						tag += '<input type="hidden" value="'+ vo.userid +'" />';
 						tag += '<i class="fab fa-gratipay" style=';
-						if(vo.userid!=vo.cardid){
+						if(vo.userid!=vo.cardid && vo.userid!=null){
 							tag += '"color:gray"';
-						} else if(vo.userid == vo.cardid){
+						} else if(vo.userid == vo.cardid && vo.userid!=null){
 							tag += '"color:orange"';
 						}
 						tag += '></i>';
@@ -558,9 +558,9 @@ var value;
 							tag += '<span class="emptyHeart">';
 							tag += '<input type="hidden" value="'+ vo.userid +'" />';
 							tag += '<i class="fab fa-gratipay" style=';
-							if(vo.userid!=vo.cardid){
+							if(vo.userid!=vo.cardid && vo.userid!=null){
 								tag += '"color:gray"';
-							} else if(vo.userid == vo.cardid){
+							} else if(vo.userid == vo.cardid && vo.userid!=null){
 								tag += '"color:orange"';
 							}
 							tag += '></i>';
