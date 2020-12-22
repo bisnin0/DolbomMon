@@ -14,7 +14,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -355,35 +354,63 @@ public class MemberController {
 		}
 		
 		// 돌봄몬 - 간단 자기소개입력 폼 >>
-		@RequestMapping(value="/dbm/profileImageOk", method = RequestMethod.POST)
-		public ModelAndView dbmIntroduce(
-			      @RequestParam("pic") MultipartFile pic,
+		@RequestMapping(value="/profileImageOk11", method = RequestMethod.POST)
+		@ResponseBody
+		public String dbmProfileImgUpload(
+				  MultipartHttpServletRequest mtfRequest,
 			      HttpSession ses,
 			      HttpServletRequest req
 				) {
-			MemberDaoImp dao = sqlSession.getMapper(MemberDaoImp.class);
-			
+			// folder where the pic will be saved
 			String path = ses.getServletContext().getRealPath("/upload");
-			System.out.println("path = " + path);
-			String fileParamName1 = pic.getName();//폼의 파일첨부 객체 변수
-			String oriFileName1 = pic.getOriginalFilename();// 원래 파일명
-			System.out.println("getName() == > " + fileParamName1 + ", " + "getOriginaleFilename() == >"+oriFileName1);
+			System.out.println(path);
 			
-			try {
-				if(oriFileName1!=null) {
-					pic.transferTo(new File(path, oriFileName1));//실제 파일업로드 발생 
-				}
-			}catch(IOException ie) {
-				ie.printStackTrace();
-			}
+			// get the file from teacherPicture.jsp input name=
+			MultipartFile mf = mtfRequest.getFile("pic2");
+
+			String pic2 = null;
+
+			if (mf != null) { // renaming
+				String fName = mf.getOriginalFilename();
+				if (fName != null && !fName.equals("")) {
+					String oriFileName = fName.substring(0, fName.lastIndexOf("."));
+					String oriExt = fName.substring(fName.lastIndexOf(".") + 1);
+
+					File f = new File(path, fName);
+					if (f.exists()) {
+						for (int renameNum = 1;; renameNum++) { // 1,2,3,4...
+							String renameFile = oriFileName + renameNum + "." + oriExt;
+							f = new File(path, renameFile);
+
+							if (!f.exists()) {
+								fName = renameFile;
+								break;
+							}
+						} // for
+					}
+
+					try {
+						mf.transferTo(f); // create file
+					} catch (Exception e) {
+					}
+					pic2 = fName; // "hi.jpg"
+
+				} // if fName
+
+			} // if mf!=Null
 			
-			ModelAndView mav = new ModelAndView();
-			
-			System.out.println("들어옴  TTTTTTT" );
-			ses.setAttribute("pic", oriFileName1);
-			mav.setViewName("register/dbm/introduce");
-			return mav;
+			System.out.println("픽="+pic2);	
+			return pic2;
 		}
+		
+		@RequestMapping(value="/dbm/profileImageOk2", method = RequestMethod.POST)
+		public String dbmProfileOk(HttpSession ses,
+				@RequestParam("pic") String pic) {
+			ses.setAttribute("pic", pic);
+			
+			return "register/dbm/introduce";
+		}
+		
 		
 		@RequestMapping(value="/parent/profileImageOk", method = RequestMethod.POST)
 		public ModelAndView parentImgUpload(
