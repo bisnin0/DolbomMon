@@ -168,7 +168,7 @@
 	<select id="selectTMem" resultType="com.dolbommon.dbmon.search.TeacherVO">
 		select username, birth, no, round((sysdate - last_edit) *1440) as last_edit from member
 	</select>
-	
+<!-- 총 수 -->	
 	<select id="getTotalRecord" resultType="int">	
 		select count(userid) from teacher where active = 'Y'
 	</select>
