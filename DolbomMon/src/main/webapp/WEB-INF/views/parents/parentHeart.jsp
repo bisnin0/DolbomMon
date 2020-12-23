@@ -153,12 +153,20 @@ $(function(){
 									tag+= Math.floor(vo.last_edit) +'분';
 								}
 								
-						tag+= '</span></h6>';
+						tag+= ' 전</span></h6>';
 								
 									
 						tag+= '<h6 class="loc"><i class="fas fa-map-marker-alt"></i>'+vo.area1+'</h6>';
 						tag+= '<h6><i class="fas fa-coins mr-1"></i>희망시급 : '+vo.desired_wage + '원 | <i class="fas fa-hands-helping"></i>협의유무: '+ vo.discussion+ '</h6>';
-						tag+= '<h6><i class="fas fa-child"></i>' +vo.birth+ '세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : '+vo.headcount+'명</h6>';
+						tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | ';
+						if(vo.gender == 'F'){
+							tag += '<i class="fas fa-venus"></i>여자';
+							}
+						else if (vo.gender == 'M'){
+							tag+= '<i class="fas fa-mars"></i>남자';
+							}
+						tag += '</h6>';
+						
 						tag+= '</li>';
 						tag += '<li class="list-group-item border-0 col-2">';
 						tag += '<button class="shinchung btn btn-warning mb-3"  id="'+vo.userid+'">신청</button>';
@@ -279,13 +287,20 @@ $(function(){
 									tag+= Math.floor(vo.last_edit) +'분';
 								}
 								
-						tag+= '</span></h6>';
+						tag+= ' 전</span></h6>';
 								
 									
 						tag+= '<h6 class="loc"><i class="fas fa-map-marker-alt"></i>'+vo.area1+'</h6>';
 						tag+= '<h6><i class="fas fa-coins mr-1"></i>희망시급 : '+vo.desired_wage + '원 | <i class="fas fa-hands-helping"></i>협의유무: '+ vo.discussion+ '</h6>';
-						tag+= '<h6><i class="fas fa-child"></i>' +vo.birth+ '세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : '+vo.headcount+'명</h6>';
-						tag+= '</li>';
+						tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | ';
+						if(vo.gender == 'F'){
+							tag += '<i class="fas fa-venus"></i>여자';
+							}
+						else if (vo.gender == 'M'){
+							tag+= '<i class="fas fa-mars"></i>남자';
+							}
+						tag += '</h6>';
+												tag+= '</li>';
 						tag += '<li class="list-group-item border-0 col-2">';
 						tag += '<button class="shinchung btn btn-warning mb-3"  id="'+vo.userid+'">신청</button>';
 						tag += '<button class="cBtn btn btn-warning" id="'+vo.userid+'">협의</button>';
@@ -388,12 +403,13 @@ $(function(){
 								<c:when test="${vo.last_edit>1440}">${edit_day}일</c:when>
 								<c:when test="${vo.last_edit>60}">${edit_hour}시간</c:when>
 								<c:otherwise>${vo.last_edit}분</c:otherwise>
-							</c:choose>
+							</c:choose> 전
 						</span>
 						</h6>
 						<h6 class="loc"><i class="fas fa-map-marker-alt"></i>${vo.area1}</h6>
 						<h6><i class="fas fa-coins mr-1"></i>희망시급 : ${vo.desired_wage}원 | <i class="fas fa-hands-helping"></i>협의유무: ${vo.discussion}</h6>
-						<h6><i class="fas fa-child"></i>${vo.birth}세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : ${vo.headcount}명</h6>
+						<h6><i class="fas fa-child"></i>${vo.birth}세 | <c:if test="${vo.gender=='F'}"><i class="fas fa-venus"></i>여자</c:if>
+						<c:if test="${vo.gender == 'M' }"><i class="fas fa-mars"></i>남자</c:if></h6>						
 					</li>
 					<li class="list-group-item border-0 col-2">
 						<button class="shinchung btn btn-warning mb-3" id=${vo.userid}>신청</button>

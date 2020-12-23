@@ -214,7 +214,7 @@ EDIT ON
 <body>
 <div style="height:130px;">
  <div id="fixed-menu" >
-	 <div class="clearfix" id="topMenuMainItem" style="-webkit-padding-start:250px; width:1295px;">
+	 <div class="clearfix" id="topMenuMainItem" style="-webkit-padding-start:250px; width:1530px;">
 	    <header id="topHeader">
 	    <img src="<%=request.getContextPath()%>/img/mylogo.png" 
 	           class="logo" alt="Logo" src="home" style="margin-top:20px; float:left;" 
@@ -230,7 +230,7 @@ EDIT ON
 	           <span style="float:right" class="row">
 	           <span id="groupchat2" class="col" style="width:90px;height:80px; margin-left:5px;">
 	           <img class="btn ppp" src="icon/chatbot5.PNG" style="height:55px; width:65px; margin-left:0px; "></img>
-	           <div class="badge badge-warning badge-pill ml-1">쪽지</div></a>
+	           <div class="badge badge-warning badge-pill ml-1" style=" margin-left:2px;">쪽지</div></a>
 	           </span>
 	           </span>
 	          <!-- <a href="/dbmon/temporaryLogin">

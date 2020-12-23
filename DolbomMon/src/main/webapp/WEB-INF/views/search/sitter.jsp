@@ -251,8 +251,14 @@ var value;
 							tag += '<span class="iconColor">';
 							tag += '<h6 class="loc"><i class="fas fa-map-marker-alt"></i>'+ vo.area1 +'</h6>';
 							tag += '<h6><i class="fas fa-coins mr-1"></i>희망시급 : '+ vo.desired_wage +'원 | <i class="fas fa-hands-helping"></i>협의유무: '+ vo.discussion +'</h6>';
-							tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : '+ vo.headcount +'명</h6>';
-							tag += '</span>';
+							tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | ';
+							if(vo.gender == 'F'){
+								tag += '<i class="fas fa-venus"></i>여자';
+								}
+							else if (vo.gender == 'M'){
+								tag+= '<i class="fas fa-mars"></i>남자';
+								}
+							tag += '</h6></span>';
 							
 							if(vo.identi_status =="Y" || vo.license_status =="Y" || vo.school_status== "Y" || vo.crime_status=="Y"){
 								tag += '<hr/>';
@@ -340,9 +346,9 @@ var value;
 								tag += '<span class="emptyHeart">';
 								tag += '<input type="hidden" value="'+ vo.userid +'" />';
 								tag += '<i class="fab fa-gratipay" style=';
-								if(vo.userid!=vo.cardid){
+								if(vo.userid!=vo.cardid && vo.userid!=null){
 									tag += '"color:gray"';
-								} else if(vo.userid == vo.cardid){
+								} else if(vo.userid == vo.cardid && vo.userid!=null){
 									tag += '"color:orange"';
 								}
 								tag += '></i>';
@@ -352,9 +358,14 @@ var value;
 								tag += '<span class="iconColor">';
 								tag += '<h6 class="loc"><i class="fas fa-map-marker-alt"></i>'+ vo.area1 +'</h6>';
 								tag += '<h6><i class="fas fa-coins mr-1"></i>희망시급 : '+ vo.desired_wage +'원 | <i class="fas fa-hands-helping"></i>협의유무: '+ vo.discussion +'</h6>';
-								tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : '+ vo.headcount +'명</h6>';
-								tag += '</span>';
-								
+								tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | ';
+								if(vo.gender == 'F'){
+									tag += '<i class="fas fa-venus"></i>여자';
+									}
+								else if (vo.gender == 'M'){
+									tag+= '<i class="fas fa-mars"></i>남자';
+									}
+								tag += '</h6></span>';
 								if(vo.identi_status =="Y" || vo.license_status =="Y" || vo.school_status== "Y" || vo.crime_status=="Y"){
 									tag += '<hr/>';
 								}
@@ -442,9 +453,9 @@ var value;
 						tag += '<span class="emptyHeart">';
 						tag += '<input type="hidden" value="'+ vo.userid +'" />';
 						tag += '<i class="fab fa-gratipay" style=';
-						if(vo.userid!=vo.cardid){
+						if(vo.userid!=vo.cardid && vo.userid!=null){
 							tag += '"color:gray"';
-						} else if(vo.userid == vo.cardid){
+						} else if(vo.userid == vo.cardid && vo.userid!=null){
 							tag += '"color:orange"';
 						}
 						tag += '></i>';
@@ -454,9 +465,14 @@ var value;
 						tag += '<span class="iconColor">';
 						tag += '<h6 class="loc"><i class="fas fa-map-marker-alt"></i>'+ vo.area1 +'</h6>';
 						tag += '<h6><i class="fas fa-coins mr-1"></i>희망시급 : '+ vo.desired_wage +'원 | <i class="fas fa-hands-helping"></i>협의유무: '+ vo.discussion +'</h6>';
-						tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : '+ vo.headcount +'명</h6>';
-						tag += '</span>';
-						
+						tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | ';
+						if(vo.gender == 'F'){
+							tag += '<i class="fas fa-venus"></i>여자';
+							}
+						else if (vo.gender == 'M'){
+							tag+= '<i class="fas fa-mars"></i>남자';
+							}
+						tag += '</h6></span>';
 						if(vo.identi_status =="Y" || vo.license_status =="Y" || vo.school_status== "Y" || vo.crime_status=="Y"){
 							tag += '<hr/>';
 						}
@@ -542,9 +558,9 @@ var value;
 							tag += '<span class="emptyHeart">';
 							tag += '<input type="hidden" value="'+ vo.userid +'" />';
 							tag += '<i class="fab fa-gratipay" style=';
-							if(vo.userid!=vo.cardid){
+							if(vo.userid!=vo.cardid && vo.userid!=null){
 								tag += '"color:gray"';
-							} else if(vo.userid == vo.cardid){
+							} else if(vo.userid == vo.cardid && vo.userid!=null){
 								tag += '"color:orange"';
 							}
 							tag += '></i>';
@@ -554,8 +570,14 @@ var value;
 							tag += '<span class="iconColor">';
 							tag += '<h6 class="loc"><i class="fas fa-map-marker-alt"></i>'+ vo.area1 +'</h6>';
 							tag += '<h6><i class="fas fa-coins mr-1"></i>희망시급 : '+ vo.desired_wage +'원 | <i class="fas fa-hands-helping"></i>협의유무: '+ vo.discussion +'</h6>';
-							tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | <i class="fas fa-baby-carriage"></i>돌봄가능아이 : '+ vo.headcount +'명</h6>';
-							tag += '</span>'
+							tag += '<h6><i class="fas fa-child"></i>'+ vo.birth +'세 | ';
+							if(vo.gender == 'F'){
+								tag += '<i class="fas fa-venus"></i>여자';
+								}
+							else if (vo.gender == 'M'){
+								tag+= '<i class="fas fa-mars"></i>남자';
+								}
+							tag += '</h6></span>';
 							if(vo.identi_status =="Y" || vo.license_status =="Y" || vo.school_status== "Y" || vo.crime_status=="Y"){
 								tag += '<hr/>';
 							}

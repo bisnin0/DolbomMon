@@ -359,6 +359,17 @@ public class ParentController {
 		return mav;
 		
 	}
+	
+	@RequestMapping("/deleteBoard")
+	public ModelAndView deleteBoard(int no) {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		
+		
+		return mav;
+	}
+	
 }
 
 

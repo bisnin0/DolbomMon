@@ -92,7 +92,7 @@
 		$(document).on("click",".pBtn",function(){
 			var userid = $(this).attr('id');
 			console.log(userid);
-			location.href='/dbmon/parentProfile?userid='+userid;
+			location.href='/dbmon/teacherView?userid='+userid;
 		});
 	})
 	

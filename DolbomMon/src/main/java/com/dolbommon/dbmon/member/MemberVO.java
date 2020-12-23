@@ -26,6 +26,7 @@ public class MemberVO {
 	private String reason;
 	private String reasontoleave;
 	private String leavedate;
+	private String pic;
 	public int getNo() {
 		return no;
 	}

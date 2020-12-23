@@ -302,7 +302,8 @@
 			* 신고된 회원은 돌봄몬 약관에 따라 이용 제재 등 불이익을 받을 수 있습니다. <br/><br/>
 		</p>
 	
-	
+
 </div>
 </body>
 </html>
+	<jsp:include page="../footer.jsp"/>

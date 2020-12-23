@@ -46,7 +46,7 @@
 	}
 	.container{
 		width:1300px;
-		padding:100px 0px;
+		padding:135px 0px;
 	}
 	.loginText{
 		width:200px;

@@ -18,6 +18,8 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 </head>
 
 <script>
@@ -234,11 +236,13 @@
 </video>
 
 <div class="jb-text">
-      <p style="font-family:'Noto Sans KR', sans-serif; font-size:58px;">돌봄몬</p>
-      <h3 style="color:white;"></h3>
+      <p style="font-family: 'Jua', sans-serif; font-size:120px;">돌봄몬</p>
+      
+      
+      <h1 style="color:white; font-family: 'Jua', sans-seri;">안심 돌봄 서비스</h1>
       <br/><br/><br/><br/>
-      <h2 style="color:white">육아에 도움이 필요할 땐 언제 어디서나</h2>
-      <h2 style="font-weight:bold; color:gold;">돌봄몬이 해결하겠습니다.</h2>
+      <h2 style="color:white; font-family: 'Jua', sans-seri;"">육아에 도움이 필요할 땐 언제 어디서나</h2>
+      <h2 style="color:gold; font-family: 'Jua', sans-seri;"">돌봄몬이 해결하겠습니다.</h2>
    </div>
 
 
