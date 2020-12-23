@@ -34,9 +34,9 @@
 	<!-- 오라클dataSource 객체 생성 "jdbc:oracle:thin:@106.240.16.163:1521:xe" -->
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       <beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></beans:property>
-      <beans:property name="url" value="jdbc:oracle:thin:@106.240.16.163:1521:xe"></beans:property>
+      <beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></beans:property>
       <beans:property name="username" value="scott"></beans:property>
-      <beans:property name="password" value="tiger009"></beans:property>
+      <beans:property name="password" value="tiger"></beans:property>
    </beans:bean>
    
    <!-- 사진 ajax업로드 -->
